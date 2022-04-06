@@ -1,5 +1,17 @@
+body{
+	width: 100%;
+	text-align: center;
+}
 td {
 	background-color:gray;
 	color:white;
+
+}
+h1{
+	
+	color: rgb(144, 61, 169);
+}
+#bootadmi{
+	margin: 25px;
 
 }
