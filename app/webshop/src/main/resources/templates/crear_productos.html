@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear productos</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+	<h1>Productos</h1>
+	<p th:text="${nombre}">xx</p>
+    <div>
+        <table>
+            <tr>
+                <th>Identificador</th>
+                <th>Nombre</th>
+                <th>descripcion</th>
+                <th>pvp</th>
+                <th>SN</th>
+                <th>imagen</th>
+                <th>color predominante</th>
+                <th>stock</th>
+                <th>temporada</th>
+                <th>rebajado
+                <th>categoria</th>
+                <th>tipo cliente</th>
+                <th>Acción</th>
+                <th>Acción</th>
+            </tr>
+            <tr th:each="productos: ${tipos_productos}">
+    			<td th:text="${productos.identificador}" />
+    			<td th:text="${productos.nombre}" />
+    			<td th:text="${productos.descripcion}" />
+                <td th:text="${productos.pvp}" />
+                <td th:text= "${productos.sn}" />
+                <td>
+    				<img th:src="${productos.imagen}" width='100px'/>
+  				</td>               
+                <td th:text="${productos.colorPredominante}" />
+                <td th:text="${productos.stock}" /> 
+                <td th:text="${productos.temporada} ? 'Sí': 'No'"/>  
+                <td th:text="${productos.rebajado}? 'Sí': 'No'"  />
+                <td th:text="${productos.id_categoria}" />
+                <td th:text="${productos.id_tipo_cliente}" />       
+    			<td>Borrar</td>
+    			<td>Modificar</td>
+			</tr>
+        </table>
+    </div>
+    <div>
+        <form method="get" action="/estefashion/crearProductos">
+            <input type="text" name="nombre" placeholder="Nombre">
+            <input type="text" name="descripcion" placeholder="descripcion">
+     
+            <input type="number" name="pvp" step=".01" placeholder="pvp">
+            
+            <input type="text" name="sn" placeholder="número de serie">
+            
+           	<input type="text" name= "imagen" placeholder="imagen">
+			
+            <input type="color" name="color" placeholder="Color predominante">
+            <input type="number" name="stock" placeholder="Stock">
+            
+            <label for="temporada">temporada</label>
+            <input type="checkbox" id="temporada" name="temporada" placeholder="temporada">
+            
+            <label for="rebajado">Rebajado</label>
+            <input type="checkbox" id="rebajado" name="rebajado" placeholder="Rebajado">
+            
+            <input type="number" name="id_categorias" placeholder="id_categorias">
+            <input type="number" name="id_tipo_cliente" placeholder="id_tipo_cliente">
+            
+            
+            <input type="submit" value="Crear">
+        </form>
+    </div>
+</body>
+</html>

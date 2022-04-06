@@ -1,0 +1,93 @@
+
+body{
+
+    background-color: rgb(33, 31, 31);
+    color: azure;
+}
+#box{
+    width: 75%;
+	margin: auto;
+    
+}
+
+.cabe{
+    font-family: 'Cedarville Cursive', cursiva;
+    text-align: center;
+    padding: 30px;
+    font-size: 60px;
+    color: rgb(144, 61, 169);
+    
+
+}
+nav{
+    margin-top: 10px;
+    text-align: center;
+    background-color: rgb(144, 61, 169);
+    padding-top: 1em;
+    padding-bottom: 1em;
+    
+    
+}
+nav ul li {
+    display: inline;
+    margin:30px;
+    color: azure;
+    font-size:20px;
+}
+
+.image{
+   float:left;
+   margin-left:15px ;
+   padding: 5px;
+}
+.imp{
+    float: right;
+    margin-right:30px;
+    margin-top: 10px;
+    padding: 5px;
+   
+}
+footer{
+    background-color: rgb(144, 61, 169);
+    width:75%;
+    height:17em ;
+    margin: auto;
+    
+}
+main{
+    margin-top: 10px;
+    
+
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;/* Ajusta con espacio entre fichas */
+}
+  
+.card {
+    flex: 0 1 25%; /* 0-flex-grow (crece) 1-flex-shrink (encoge) flex-basics (tamaÃ±o) */
+
+    margin-bottom: 10px;
+    margin-right: 2px;
+    margin-left: 2px;
+    padding: 15px;
+    background-color: rgb(96, 93, 93);
+    box-shadow: 2px 2px  rgb(144, 61, 169);
+}
+.card img{
+    width: 100%;
+}
+.nombre-producto{
+    width: 100%;
+    text-align: center;
+    color: azure;
+    font-size:25px;
+}
+.precio-producto{
+    
+    text-align: center;
+   
+}
+

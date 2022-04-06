@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear tiposClientes</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+	<h1>Tipo cliente</h1>
+	<p th:text="${nombre}">xx</p>
+    <div>
+        <table>
+            <tr>
+                <th>Identificador</th>
+                <th>Nombre</th>
+                <th>Acción</th>
+                <th>Acción</th>
+            </tr>
+            <tr th:each="tiposClientes: ${tipos_tiposClientes}">
+    			<td th:text="${tiposClientes.identificador}" />
+    			<td th:text="${tiposClientes.nombre}" />
+    			<td>Borrar</td>
+    			<td>Modificar</td>
+			</tr>
+        </table>
+    </div>
+    <div>
+        <form method="get" action="/crearTiposClientes">
+            <input type="text" name="nombre" placeholder="Nombre de tipos_clientes">
+            <input type="submit" value="Enviar">
+        </form>
+    </div>
+</body>
+</html>

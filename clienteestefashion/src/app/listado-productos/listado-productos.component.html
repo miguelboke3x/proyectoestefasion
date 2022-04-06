@@ -1,0 +1,11 @@
+<main>
+    <section class="cards">
+        <div class="card" *ngFor="let producto of listadoProductos">
+            <div> <img src={{producto.imagen}} width='100px' /> </div>
+            <div class="nombre-producto"> <span>{{producto.nombre}}</span> </div>
+            <div class="nombre-producto" style="font-size: 0.9em; color: darkgoldenrod;"> <span th>{{producto.descripcion}}</span>
+            </div>
+            <div class="precio-producto"> <span>{{producto.pvp}}$</span> </div>
+        </div>
+    </section>
+</main>

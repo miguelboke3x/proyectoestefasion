@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    
+
+    <title>Estefasion</title>
+    
+</head>
+
+<body>
+    <div id="box">
+        <header>
+            
+            <img class="imp" src="./image/usuario.png" alt="usuario" width="20px" style="color: azure;">
+            <img class="imp" src="./image/cesta.png" alt="cesta compra" width="23px">
+            <form>
+                <button class="imp" type="submit">Buscar</button>
+                <input class="imp" type="text" name="buscar" placeholder="Buscar y pulse enter">
+
+            </form>
+               
+            <img class="image" src="./image/logo.png" alt="logo" width="120px">
+
+
+            <h1 class="cabe">ESTEFASION</h1>
+                     
+        </header>
+        
+        <nav >
+            <ul >
+                <li>CAMISAS</li>
+                <li>CAMISETAS</li>
+                <li>PANTALONES</li>
+                <li>CALZADO</li>
+                <li>COMPLEMENTOS</li>
+            </ul>
+        </nav>
+        <main id="main">
+            <section class="cards" >
+                <article class="card" th:each="productos: ${tipos_productos}" >
+                    <div>
+                        <img th:src="${productos.imagen}" width='100px'/>
+                    </div>
+                    <div class="nombre-producto">
+                       <span th:text="${productos.nombre}"></span>
+                    </div>
+                    <div class="nombre-producto" style="font-size: 0.9em; color: darkgoldenrod;">
+                        <span th:text="${productos.descripcion}"></span>
+                    </div>
+                    <div class="precio-producto">
+                        <span th:text="${productos.pvp}+€"></span>
+                    </div>
+                </article><!-- /card-one -->
+                
+            </section>
+        </main>
+    </div>
+    <footer>
+        <nav>
+            <ul>
+                <li>Contacto</li>
+                <li>Quenes somos</li>
+                <li>Trabaja con nosotros</li>
+                <li>Aviso legal</li>
+            </ul>
+        </nav>
+        <img class="redes" src="./image/facebook.webp" alt="facebook" width="50px">
+        <img class="redes" src="./image/instagram.webp" alt="instagram" width="50px">
+        <img class="redes" src="./image/twitter.webp" alt="Twitter" width="50px">
+        <img class="redes" src="./image/what.webp" alt="what" width="50px">
+
+        <p class="precio-producto">©Estefashion  2022</p>
+    </footer>
+        
+
+</body>
+
+</html>
